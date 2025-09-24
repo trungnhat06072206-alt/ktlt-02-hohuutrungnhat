@@ -1,0 +1,18 @@
+Function Main
+    Declare Real a, b, x
+
+    Output " nhap a"
+    Input a
+    Output "nhap b"
+    Input b
+    If a=0
+        If b=0
+            Output "phuong trinh vo so nghiem"
+        Else
+            Output "phuong trinh vo nghiem"
+        End
+    Else
+        Assign x = -b/a
+        Output "nghiem x = " & x
+    End
+End

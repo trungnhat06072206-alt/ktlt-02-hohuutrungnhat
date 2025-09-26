@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="1.2"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-26 07:05:16 CH"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1DQU5OM1JROzIwMjUtMDktMjQ7MDQ6Mzk6MjIgUE07MjUyNQ=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1DQU5OM1JROzIwMjUtMDktMjQ7MDQ6NTk6MTUgUE07MTsyNjM3"/>
+        <attribute name="edited" value="YWRtaW47TVNJOzIwMjUtMDktMjY7MDc6MDU6MTYgQ0g7MTsyMTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, delta, x1, x2" type="Real" array="False" size=""/>
+            <output expression="&quot;nhap a ,b ,c:&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a=0">
+                <then>
+                    <output expression="&quot;khong phai phuong trinh bac 2&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="delta" expression="b*b - 4*a*c"/>
+                    <if expression="delta &lt; 0">
+                        <then>
+                            <output expression="&quot;phuong trinh vo nghiem&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="delta = 0">
+                                <then>
+                                    <assign variable="x1" expression="-b/(2*a)"/>
+                                    <output expression="&quot;nghiem kep : x= &quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="x1" expression="(-b+sqrt(delta))/(2*delta)"/>
+                                    <assign variable="x2" expression="(-b-sqrt(delta))/(2*delta)"/>
+                                    <output expression="&quot;2nghiem phan biet: x1= ,x2= &quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

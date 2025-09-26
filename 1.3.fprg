@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="1.3"/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-26 08:40:08 CH"/>
+        <attribute name="created" value="YWRtaW47TVNJOzIwMjUtMDktMjY7MDg6MTI6MDIgQ0g7MjAxOQ=="/>
+        <attribute name="edited" value="YWRtaW47TVNJOzIwMjUtMDktMjY7MDg6NDA6MDggQ0g7MTsyMTM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;nhap so luong phan tu n:&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&lt;=0">
+                <then>
+                    <output expression="&quot;n khong phai la so nguyen duong&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="a" expression="0"/>
+                    <assign variable="b" expression="1"/>
+                    <output expression="a" newline="True"/>
+                    <if expression="n&gt;1">
+                        <then>
+                            <output expression="b" newline="True"/>
+                            <for variable="i" start="3" end="n" direction="inc" step="1">
+                                <assign variable="c" expression="a+b"/>
+                                <output expression="c" newline="True"/>
+                                <assign variable="a" expression="b"/>
+                                <assign variable="b" expression="c"/>
+                            </for>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
